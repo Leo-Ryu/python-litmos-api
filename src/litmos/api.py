@@ -22,7 +22,7 @@ class API(object):
             '&format=json' + \
             ("&search=" + str(kwargs['search_param']) if kwargs.get('search_param', None) else "") + \
             ("&limit=" + str(kwargs['limit']) if kwargs.get('limit', None) else "") + \
-            ("&sendmessage=true" if kwargs.get('sendmessage', None) else "") + \
+            ("&sendmessage=true" if kwargs.get('send_message', None) else "") + \
             ("&start=" + str(kwargs['start']) if kwargs.get('start', None) else "")
 
     @classmethod
