@@ -64,7 +64,7 @@ class LitmosType(object):
         return API.delete(cls.name(), resource_id=resource_id)
 
     @classmethod
-    def create(cls, attributes):
+    def create(cls, attributes, send_message=False):
         schema = copy(cls.SCHEMA)
         for param in schema:
             attribute_value = attributes.get(param, None)
@@ -72,7 +72,7 @@ class LitmosType(object):
                 schema[param] = attribute_value
 
         return cls._parse_response(
-            API.create(cls.name(), schema)
+            API.create(cls.name(), schema, send_message)
         )
 
     @classmethod
