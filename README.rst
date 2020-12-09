@@ -161,6 +161,8 @@ Documentation
 
 https://python-litmos-api.readthedocs.io/
 
+https://docs.contour.so/Flockjay/python-litmos-api/getting-started
+
 Development
 -----------
 
